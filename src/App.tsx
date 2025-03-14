@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Nav from './components/Nav';
 
 function App() {
@@ -13,3 +13,17 @@ function App() {
 }
 
 export default App;
+
+
+// function App() {
+//   return (
+//       <Router>
+//           <Routes>
+//               <Route path="/" element={<Layout />}>
+//                   <Route index element={<Home />} />
+//                   <Route path="about" element={<About />} />
+//               </Route>
+//           </Routes>
+//       </Router>
+//   );
+// }
