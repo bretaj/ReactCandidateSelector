@@ -96,7 +96,8 @@ tbody tr:nth-child(odd) {
 
 .nav {
   display: flex;
-  justify-content: flex-start;
+  text-align: left;
+  float: left;
   padding: 1em 2em;
   width: 100%; 
 }
@@ -119,3 +120,4 @@ tbody tr:nth-child(odd) {
   width: 80vw;
   table-layout: fixed;
 }
+
