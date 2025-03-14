@@ -1,7 +1,8 @@
-import DeleteCandidate from "../components/deleteCandidate";
+import DeleteCandidate from "../components/DeleteCandidate";
 
 const SavedCandidates = () => {
 
+  // retreiving and parsing local storage candidate data
   const savedCandidates = JSON.parse(localStorage.getItem("candidate"))
 
   return (
@@ -23,7 +24,7 @@ const SavedCandidates = () => {
           </thead>
           <tbody id="table-body">
 
-
+{/* retrieves from local storage, and creates new table data cells with retrieved information  */}
             {
               savedCandidates.map(candidate => {
                 return (

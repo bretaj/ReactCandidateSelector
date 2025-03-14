@@ -83,7 +83,7 @@ const CandidateSearch = () => {
                 <button className="save"
                     onClick=
                     {() => {
-
+                        // saving mutliple candidates to local storage
                         const savedCandidates = JSON.parse(localStorage.getItem("candidate")) || [];
                         savedCandidates.push(candidate);
 
