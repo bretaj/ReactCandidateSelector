@@ -20,9 +20,9 @@ export default App;
 //       <Router>
 //           <Header />
 //           <Routes>
-//               <Route path="/" element={<Home />}>
-//                   <Route index element={<Home />} />
-//                   <Route path="about" element={<About />} />
+//               <Route path="/" element={<Layout />}>
+//                   <Route index element={<CandidateSearch />} />
+//                   <Route path="Potential Candidates" element={<SavedCandidates />} />
 //               </Route>
 //           </Routes>
 //       </Router>
