@@ -95,18 +95,20 @@ tbody tr:nth-child(odd) {
 }
 
 /* css for nav bar links */
-.header p{
+header p{
   font-size: 2rem;
+  margin: 0.25rem;
+  padding-right: 3rem;
 }
 
-.nav {
+nav {
   display: flex;
   text-align: center;
   padding: 1em 2em;
   width: 100%; 
 }
 
-.nav-item {
+/* .nav-item {
   padding: 0 0.5rem;
   list-style: none;
 }
@@ -114,7 +116,7 @@ tbody tr:nth-child(odd) {
 .nav-link {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 .active {
   font-weight: 700;

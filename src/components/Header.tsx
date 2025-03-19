@@ -3,7 +3,7 @@ import Nav from './Nav.tsx';
 
 function Header() {
     return (
-        <header className="header">
+        <header>
             <Nav />
         </header>
     );

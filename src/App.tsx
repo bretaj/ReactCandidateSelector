@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Header from './components/Header.tsx';
+import AddSubtract from './components/AddSubtract.tsx';
+import CandidateCard from './components/CandidateCard.tsx';
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Header />
       <main>
         <Outlet />
+        <CandidateCard />
+        <AddSubtract />
       </main>
     </>
   );
