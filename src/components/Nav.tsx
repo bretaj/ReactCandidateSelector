@@ -19,11 +19,11 @@ const Nav: React.FC = () => {
   const location = useLocation();
   
   return (
-    <nav className="nav">
-      <ul>
+    <nav>
+      <ul className="nav">
         <li className="nav-item">
               {/* css to get active links to show as heavier font */}
-              {/* TODO: figure out why links are stacked*/}
+              {/* TODO: figure out how to get links to left side?} */}
           <Link to="/" className={location.pathname === '/' ? 'active' : 'nav-link'}>Home</Link>
         </li>
         <li className="nav-item">
