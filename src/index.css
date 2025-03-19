@@ -101,14 +101,14 @@ header p{
   padding-right: 3rem;
 }
 
-nav {
+.nav {
   display: flex;
   text-align: center;
   padding: 1em 2em;
   width: 100%; 
 }
 
-/* .nav-item {
+.nav-item {
   padding: 0 0.5rem;
   list-style: none;
 }
@@ -116,7 +116,7 @@ nav {
 .nav-link {
   color: #fff;
   text-decoration: none;
-} */
+}
 
 .active {
   font-weight: 700;
