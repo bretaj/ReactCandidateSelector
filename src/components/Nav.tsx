@@ -21,12 +21,12 @@ const Nav: React.FC = () => {
   return (
     <nav className="nav">
       <ul>
-        <li>
+        <li className="nav-item">
               {/* css to get active links to show as heavier font */}
-              {/* TODO: figure out which classNames to plug in */}
+              {/* TODO: figure out why links are stacked*/}
           <Link to="/" className={location.pathname === '/' ? 'active' : 'nav-link'}>Home</Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link to="/SavedCandidates" className={location.pathname === '/SavedCandidates' ? 'active' : 'nav-link'}>Potential Candidates</Link>
         </li>
       </ul>
