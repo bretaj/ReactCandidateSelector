@@ -10,8 +10,9 @@ function App() {
       <Header />
       <main>
         <Outlet />
+        {/* TODO: uncomment when components are completed, and if needed
         <CandidateCard />
-        <AddSubtract />
+        <AddSubtract /> */}
       </main>
     </>
   );

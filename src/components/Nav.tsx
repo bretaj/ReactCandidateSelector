@@ -22,6 +22,7 @@ export default Nav;
 //     <nav className="text-right">
 //       <ul>
 //         <li>
+              // css to get active links to show as darker color
 //           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
 //         </li>
 //         <li>
