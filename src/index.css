@@ -101,6 +101,11 @@ header p{
   padding-right: 3rem;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
 .nav {
   display: flex;
   text-align: center;

@@ -1,5 +1,3 @@
-
-
 // const Nav = () => {
 //   // TODO: Add necessary code to display the navigation bar and link between the pages
 //   return (
@@ -24,11 +22,12 @@ const Nav: React.FC = () => {
     <nav className="nav">
       <ul>
         <li>
-              {/* css to get active links to show as darker color */}
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+              {/* css to get active links to show as heavier font */}
+              {/* TODO: figure out which classNames to plug in */}
+          <Link to="/" className={location.pathname === '/' ? 'active' : 'nav-link'}>Home</Link>
         </li>
         <li>
-          <Link to="/SavedCandidates" className={location.pathname === '/SavedCandidates' ? 'active' : ''}>Potential Candidates</Link>
+          <Link to="/SavedCandidates" className={location.pathname === '/SavedCandidates' ? 'active' : 'nav-link'}>Potential Candidates</Link>
         </li>
       </ul>
     </nav>
