@@ -12,7 +12,7 @@ const Nav = () => {
 
 export default Nav;
 
-
+// TODO: can I use the routing instead?
 // import React from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 
@@ -23,16 +23,10 @@ export default Nav;
 //     <nav className="text-right">
 //       <ul>
 //         <li>
-//           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>About Me</Link>
+//           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
 //         </li>
 //         <li>
-//           <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'active' : ''}>Portfolio</Link>
-//         </li>
-//         <li>
-//           <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
-//         </li>
-//         <li>
-//           <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link>
+//           <Link to="/SavedCandidates" className={location.pathname === '/SavedCandidates' ? 'active' : ''}>Potential Candidates</Link>
 //         </li>
 //       </ul>
 //     </nav>

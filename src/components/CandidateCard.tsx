@@ -1,15 +1,17 @@
+// TODO: This is the FilmCard code from the Mod13 mini project. 
+// Using this to see how much can just be copied over
+
 import type React from 'react';
 // TODO: Uncomment when Candidate interface is added
 // import type Candidate from '../interfaces/Candidate.interface';
 import { IoEyeOutline } from 'react-icons/io5';
 import { ImCross } from 'react-icons/im';
 import { CgPlayListAdd } from 'react-icons/cg';
-// TODO: This is the FilmCard code from the Mod13 mini project. Using this to see how much can just be 
-// copied over
+
 
 // TODO: Define FilmCardProps
 type CandidateCardProps = {
-  
+
 };
 
 const CandidateCard = () => {
