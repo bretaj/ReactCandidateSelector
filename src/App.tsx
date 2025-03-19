@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-import Nav from './components/Nav';
+import Header from './components/Header.tsx';
 
 function App() {
   return (
     <>
-      <Nav />
+    {/* TODO: figure out what exactly <Outlet /> does */}
+      <Header />
       <main>
         <Outlet />
       </main>

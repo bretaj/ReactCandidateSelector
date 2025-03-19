@@ -94,10 +94,14 @@ tbody tr:nth-child(odd) {
   background-color: #333333;
 }
 
+/* css for nav bar links */
+.header p{
+  font-size: 2rem;
+}
+
 .nav {
   display: flex;
-  text-align: left;
-  float: left;
+  text-align: center;
   padding: 1em 2em;
   width: 100%; 
 }

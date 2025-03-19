@@ -3,8 +3,8 @@ const Nav = () => {
   return (
     <>
     <div className="nav">
-    <div>Home</div>
-    <div>Potential Candidates</div>
+    <p>Home</p>
+    <p>Potential Candidates</p>
     </div>
     </>
   )
@@ -13,6 +13,7 @@ const Nav = () => {
 export default Nav;
 
 // TODO: can I use the routing instead?
+
 // import React from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 
