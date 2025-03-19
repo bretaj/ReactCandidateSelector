@@ -95,11 +95,6 @@ tbody tr:nth-child(odd) {
 }
 
 /* css for nav bar links */
-header p{
-  font-size: 2rem;
-  margin: 0.25rem;
-  padding-right: 3rem;
-}
 
 nav {
   display: flex;

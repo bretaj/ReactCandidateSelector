@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-import Header from './components/Header.tsx';
+import Nav from './components/Nav.tsx';
 import AddSubtract from './components/AddSubtract.tsx';
 import CandidateCard from './components/CandidateCard.tsx';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     {/* TODO: figure out what exactly <Outlet /> does */}
-      <Header />
+      <Nav />
       <main>
         <Outlet />
         {/* TODO: uncomment when components are completed, and if needed
