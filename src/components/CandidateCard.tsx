@@ -1,24 +1,24 @@
-import Button from './Button.tsx'
+// import Button from './Button.tsx'
 
-const CandidateCard = () => {
-  return (
-    <>
-    <div className='card'>
-                <img src={candidate.avatar_url} alt={`$candidate.login}'s avatar`} />
-                <div>
-                    <h2>{candidate.login}</h2>
-                    <p>{candidate.location}</p>
-                    <p>{candidate.email}</p>
-                </div>
+// const CandidateCard = () => {
+//   return (
+//     <>
+//     <div className='card'>
+//                 <img src={candidate.avatar_url} alt={`$candidate.login}'s avatar`} />
+//                 <div>
+//                     <h2>{candidate.login}</h2>
+//                     <p>{candidate.location}</p>
+//                     <p>{candidate.email}</p>
+//                 </div>
           
-          <Button />
+//           <Button />
         
-        </div>
-    </>        
-  );
-}
+//         </div>
+//     </>        
+//   );
+// }
 
-export default CandidateCard
+// export default CandidateCard
 
 
 
