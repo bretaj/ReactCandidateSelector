@@ -7,15 +7,15 @@ const CandidateSearch = () => {
 
     const [candidate, setCandidate] = useState<Candidate>(
         {
-            useloginname: "",
+            login: "",
             avatar_url: "",
             location: "",
             email: ""
         }
-    )
+    );
 
     const [candidates, setCandidates] = useState([])
-
+    const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
 
@@ -34,7 +34,7 @@ const CandidateSearch = () => {
                 location: candidateData.location,
                 email: candidateData.email
             }
-        )
+        );
     }
 
 
@@ -48,12 +48,24 @@ const CandidateSearch = () => {
         getSingleCandidate()
     }, [candidates, currentIndex])
 
+    useEffect(() => {
+        const saved = localStorage.getItem('savedCandidates');
+        if (saved) {
+            setSavedCandidates(JSON.parse(saved));
+        }
+    }, []);
+
+    const saveCandidate = () => {
+        const updatedSavedCandidates = [...savedCandidates, candidate];
+        setSavedCandidates(updatedSavedCandidates);
+        localStorage.setItem('savedCandidates', JSON.stringify(updatedSavedCandidates));
+    }
 
     return (
         <>
 
             <div className='card'>
-                <img src={candidate.avatar_url} />
+                <img src={candidate.avatar_url || 'default-image-url.png'} alt={candidate.login} />
                 <div>
                     <h2>{candidate.login}</h2>
                     <p>{candidate.location}</p>
