@@ -1,35 +1,21 @@
+import Button from './Button.tsx'
 
 const CandidateCard = () => {
-    <><div className='card'>
-                <img src={candidate.avatar_url} />
+  return (
+    <>
+    <div className='card'>
+                <img src={candidate.avatar_url} alt={`$candidate.login}'s avatar`} />
                 <div>
                     <h2>{candidate.login}</h2>
                     <p>{candidate.location}</p>
                     <p>{candidate.email}</p>
                 </div>
-            </div>
-
-
-            <div>
-
-                <button className="next"
-                    onClick={() => {
-                        setCurrentIndex(currentIndex + 1)
-                    }}
-                >Next Candidate</button>
-
-                <button className="save"
-                    onClick={() => {
-                        console.log("saving candidate")
-                        localStorage.setItem('candidate', JSON.stringify(candidate))
-                        // TODO:  save multiple! -> collection -> array
-                    }}
-                >Save Candidate</button>
-
-
-            </div>
+          
+          <Button />
+        
+        </div>
     </>        
-
+  );
 }
 
 export default CandidateCard
