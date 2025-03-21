@@ -1,4 +1,5 @@
 // WHERE/HOW DO I IMPORT THESE?!
+import '../index.css'
 
 const searchGithub = async () => {
   try {
