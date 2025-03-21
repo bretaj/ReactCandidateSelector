@@ -4,16 +4,10 @@ import { Candidate } from '../interfaces/Candidate.interface';
 
 const CandidateSearch = () => {
 
-    // const candidate: Candidate = {
-    //     login: "john123",
-    //     avatar_url: "https://placehold.co/500",
-    //     location: "New York",
-    //     email: "john123@mail.com"
-    // }
 
     const [candidate, setCandidate] = useState<Candidate>(
         {
-            useloginrname: "",
+            useloginname: "",
             avatar_url: "",
             location: "",
             email: ""
@@ -70,17 +64,17 @@ const CandidateSearch = () => {
 
             <div>
 
-                <button
+                <button className="next"
                     onClick={() => {
                         setCurrentIndex(currentIndex + 1)
                     }}
                 >Next Candidate</button>
 
-                <button
+                <button className="save"
                     onClick={() => {
                         console.log("saving candidate")
                         localStorage.setItem('candidate', JSON.stringify(candidate))
-                        // make sure to save multiple! -> collection -> array
+                        // TODO:  save multiple! -> collection -> array
                     }}
                 >Save Candidate</button>
 

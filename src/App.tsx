@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Nav from './components/Nav.tsx';
-import AddSubtract from './components/AddSubtract.tsx';
 import CandidateCard from './components/CandidateCard.tsx';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
         <Outlet />
         {/* TODO: uncomment when components are completed, and if needed
         <CandidateCard />
-        <AddSubtract /> */}
+         */}
       </main>
     </>
   );
