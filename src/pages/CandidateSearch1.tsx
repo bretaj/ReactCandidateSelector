@@ -11,7 +11,9 @@ const CandidateSearch = () => {
             login: "",
             avatar_url: "",
             location: "",
-            email: ""
+            email: "",
+            company:"",
+            bio: ""   
         }
     );
 
@@ -32,7 +34,9 @@ const CandidateSearch = () => {
                 login: candidateData.login,
                 avatar_url: candidateData.avatar_url,
                 location: candidateData.location,
-                email: candidateData.email
+                email: candidateData.email,
+                company: candidateData.company,
+                bio: candidateData.bio
             }
         );
     }
@@ -75,9 +79,9 @@ const CandidateSearch = () => {
                 <button className="save"
                     onClick=
                     {() => {
-                        console.log("saving candidate")
-                        localStorage.setItem('candidate', JSON.stringify(candidate))
-                        SavedCandidates()// TODO:  save multiple! -> collection -> array
+                         localStorage.setItem('candidate', JSON.stringify(candidate))
+                        // SavedCandidates()
+                        // TODO:  save multiple! -> collection -> array
                     }}
                 >Save Candidate
                 </button>
