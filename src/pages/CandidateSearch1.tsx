@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import { Candidate } from '../interfaces/Candidate.interface';
+import SavedCandidates from './SavedCandidates';
 
 const CandidateSearch = () => {
 
@@ -15,7 +16,6 @@ const CandidateSearch = () => {
     );
 
     const [candidates, setCandidates] = useState([])
-    const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
 
@@ -48,28 +48,17 @@ const CandidateSearch = () => {
         getSingleCandidate()
     }, [candidates, currentIndex])
 
-    useEffect(() => {
-        const saved = localStorage.getItem('savedCandidates');
-        if (saved) {
-            setSavedCandidates(JSON.parse(saved));
-        }
-    }, []);
-
-    const saveCandidate = () => {
-        const updatedSavedCandidates = [...savedCandidates, candidate];
-        setSavedCandidates(updatedSavedCandidates);
-        localStorage.setItem('savedCandidates', JSON.stringify(updatedSavedCandidates));
-    }
-
     return (
         <>
 
             <div className='card'>
-                <img src={candidate.avatar_url || 'default-image-url.png'} alt={candidate.login} />
+                <img src={candidate.avatar_url} alt={candidate.login} />
                 <div>
                     <h2>{candidate.login}</h2>
                     <p>{candidate.location}</p>
                     <p>{candidate.email}</p>
+                    <p>{candidate.company}</p>
+                    <p>{candidate.bio}</p>
                 </div>
             </div>
 
@@ -80,15 +69,18 @@ const CandidateSearch = () => {
                     onClick={() => {
                         setCurrentIndex(currentIndex + 1)
                     }}
-                >Next Candidate</button>
+                >Next Candidate
+                </button>
 
                 <button className="save"
-                    onClick={() => {
+                    onClick=
+                    {() => {
                         console.log("saving candidate")
                         localStorage.setItem('candidate', JSON.stringify(candidate))
-                        // TODO:  save multiple! -> collection -> array
+                        SavedCandidates()// TODO:  save multiple! -> collection -> array
                     }}
-                >Save Candidate</button>
+                >Save Candidate
+                </button>
 
 
             </div>
