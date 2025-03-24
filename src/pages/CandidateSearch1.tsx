@@ -72,7 +72,7 @@ const CandidateSearch = () => {
 
 
             <div>
-{/* The Next Candidate buttom increments the currentIndex, allowing user to view next candidate */}
+{/* The Next Candidate button increments the currentIndex, allowing user to view next candidate */}
                 <button className="next"
                     onClick={() => {
                         setCurrentIndex(currentIndex + 1)
@@ -100,7 +100,7 @@ const CandidateSearch = () => {
 };
     // insert code here for saving multiple candidates to local storage
 
-    // const potentialCandidates = [];
+    // const candidates = [];
 
 
 
