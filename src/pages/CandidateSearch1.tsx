@@ -77,7 +77,7 @@ const CandidateSearch = () => {
                     onClick={() => {
                         setCurrentIndex(currentIndex + 1)
                     }}
-                >Next Candidate
+                >Next
                 </button>
 {/* the Save Candidate button saves the current candidate's info to localStorage */}
                 <button className="save"
@@ -87,7 +87,7 @@ const CandidateSearch = () => {
                         // SavedCandidates()
                         // TODO:  save multiple! -> collection -> array
                     }}
-                >Save Candidate
+                >Save
                 </button>
 
 

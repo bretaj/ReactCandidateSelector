@@ -1,3 +1,5 @@
+// TODO: figure out what I need to import
+
 const tableBodyE1 = document.querySelector('#table-body');
 
 function createE1(candidate){
@@ -25,6 +27,7 @@ const SavedCandidates = () => {
       <h1>Potential Candidates</h1>
       <main>
         <table>
+          <thead>
             <tr>
               <th id="image">Image</th>
               <th id="name">Name</th>
@@ -34,6 +37,7 @@ const SavedCandidates = () => {
               <th id="bio">Bio</th>
               <th id="reject">Reject</th>
             </tr>
+            </thead>
             <tbody id="table-body"></tbody>
         </table>
       </main>
