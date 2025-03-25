@@ -63,10 +63,10 @@ const CandidateSearch = () => {
                 <img src={candidate.avatar_url} alt={candidate.login} />
                 <div>
                     <h2>{candidate.login}</h2>
-                    <p>{candidate.location}</p>
-                    <p>{candidate.email}</p>
-                    <p>{candidate.company}</p>
-                    <p>{candidate.bio}</p>
+                    <p>{candidate.location || "location unknown"}</p>
+                    <p>{candidate.email || "email unavailable" }</p>
+                    <p>{candidate.company || "company unavailable"}</p>
+                    <p>{candidate.bio || "bio unavailable"}</p>
                 </div>
             </div>
 
@@ -83,7 +83,11 @@ const CandidateSearch = () => {
                 <button className="save"
                     onClick=
                     {() => {
-                         localStorage.setItem('candidate', JSON.stringify(candidate))
+
+                        const savedCandidates = JSON.parse(localStorage.getItem("candidate")) || [];
+                        savedCandidates.push(candidate);
+
+                         localStorage.setItem('candidate', JSON.stringify(savedCandidates))
                         // SavedCandidates()
                         // TODO:  save multiple! -> collection -> array
                     }}
