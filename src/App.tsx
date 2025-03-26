@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Nav from './components/Nav.tsx';
-import CandidateCard from './components/CandidateCard.tsx';
 
 function App() {
   return (

@@ -7,18 +7,17 @@ const CandidateSearch = () => {
 
     // initializes a state variable (candidate) to hold the details of a single candidate. The initial state is an objext w/empty strings for each property (login, location, etc.)
     // setCandidate is the function used to update this state 
-    const [candidate, setCandidate] = useState<Candidate>(
-        {
-            login: "",
-            avatar_url: "",
-            location: "",
-            email: "",
-            company: "",
-            bio: ""
-        }
-    );
+    const initialData = {
+        login: "",
+        avatar_url: "",
+        location: "",
+        email: "",
+        company: "",
+        bio: ""
+    }
+    const [candidate, setCandidate] = useState<Candidate>(initialData);
 
-    const [candidates, setCandidates] = useState([])
+    const [candidates, setCandidates] = useState([initialData])
     const [currentIndex, setCurrentIndex] = useState(0);
     // candidates is an array that will hold multiple candidate objects fetched from GitHub
     // currentIndex tracks the index of the currently displayed candidate
@@ -84,7 +83,7 @@ const CandidateSearch = () => {
                     onClick=
                     {() => {
                         // saving mutliple candidates to local storage
-                        const savedCandidates = JSON.parse(localStorage.getItem("candidate")) || [];
+                        const savedCandidates = JSON.parse(localStorage.getItem("candidate")as string) || [];
                         savedCandidates.push(candidate);
 
                         localStorage.setItem('candidate', JSON.stringify(savedCandidates))

@@ -1,9 +1,10 @@
 import DeleteCandidate from "../components/DeleteCandidate";
+import { Candidate } from "../interfaces/Candidate.interface";
 
 const SavedCandidates = () => {
 
   // retreiving and parsing local storage candidate data
-  const savedCandidates = JSON.parse(localStorage.getItem("candidate"))
+  const savedCandidates = JSON.parse(localStorage.getItem("candidate")as string)
 
   return (
     <>
@@ -26,7 +27,7 @@ const SavedCandidates = () => {
 
 {/* retrieves from local storage, and creates new table data cells with retrieved information  */}
             {
-              savedCandidates.map(candidate => {
+              savedCandidates.map((candidate:Candidate) => {
                 return (
                   <tr>
                     <td>
