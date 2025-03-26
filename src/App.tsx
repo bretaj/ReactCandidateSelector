@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Nav from './components/Nav.tsx';
 
 function App() {
